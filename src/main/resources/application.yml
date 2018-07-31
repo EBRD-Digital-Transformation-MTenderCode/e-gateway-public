@@ -24,19 +24,19 @@ zuul:
     public:
       path: /public/**
       serviceId: public-point
-      stripPrefix: false
+      stripPrefix: true
 
     mdm:
       path: /mdm/**
       serviceId: e-mdm
-      stripPrefix: false
+      stripPrefix: true
 
 eureka:
   client:
     fetchRegistry: true
     registerWithEureka: false
     serviceUrl:
-      defaultZone: http://eureka-peer-1:8800/eureka/,http://eureka-peer-2:8800/eureka/
+      defaultZone: http://10.0.20.116:8801/eureka/,http://10.0.20.116:8802/eureka/
 
 jwt:
   public-key: |
