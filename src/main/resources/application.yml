@@ -3,11 +3,16 @@ spring:
     inetutils:
       preferredNetworks:
         - 192.168
-
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 50Mb
+      max-request-size: 50Mb
 zuul:
   rsa-filter:
     exclude:
-    - e-auth-tokens
+    - e-public
+    - e-mdm
 
   sensitiveHeaders:
 #  sensitive-headers: Cookie,Set-Cookie,Authorization
@@ -16,26 +21,15 @@ zuul:
   ignoredServices: '*'
 
   routes:
-    e-auth-tokens:
-      path: /auth/tokens
-      serviceId: e-auth
-      stripPrefix: false
-    e-auth-refresh:
-      path: /auth/refresh
-      serviceId: e-auth
+    e-public:
+      path: /public/**
+      serviceId: e-public-point
       stripPrefix: false
 
-    e-operation:
-      path: /operation/**
-      serviceId: e-operation
+    e-mdm:
+      path: /mdm/**
+      serviceId: e-mdm
       stripPrefix: false
-
-
-#    hello:
-#      path: /hello/**
-#      serviceId: HelloService
-#      url: http://example.com/hello
-#      stripPrefix: true
 
 eureka:
   client:
@@ -52,16 +46,3 @@ jwt:
              upBKz4Lf7LtAGi+B50mX196yUHTirm6PKKJLcIuooqOHp39ecvaqHwWMloVH0sjTpZh7hvCRpARdxUQ/8KAB8tiFoMsCJPEr/Alr6P64B0
              6oX0VzT68u5lyNQL6h5YaGxUuRwhFuKcvEt3wavHNoHn2FmyJjrhlcRLjyi3jiz/0WjQIDAQAB
              -----END PUBLIC KEY-----
-
-
-#hello:
-#  ribbon:
-#    ReadTimeout: 10
-
-#hystrix:
-#  command:
-#    hello:
-#      execution:
-#        isolation:
-#          thread:
-#            timeoutInMilliseconds: 5
