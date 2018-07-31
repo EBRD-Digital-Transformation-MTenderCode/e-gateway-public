@@ -20,7 +20,7 @@
 
     <properties>
         <final-artifact-name>${project.artifactId}-${project.version}</final-artifact-name>
-        <docker-registry>dev.docker-registry.eprocurement.systems</docker-registry>
+        <docker-registry>docker-registry.eprocurement.systems</docker-registry>
         <project.service.port>8080</project.service.port>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
