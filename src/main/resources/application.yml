@@ -11,22 +11,22 @@ spring:
 zuul:
   rsa-filter:
     exclude:
-    - e-public
-    - e-mdm
+    - public
+    - mdm
 
   sensitiveHeaders:
 #  sensitive-headers: Cookie,Set-Cookie,Authorization
 #  ignore-security-headers: false
-  prefix: /api/v1
+#  prefix: /api/v1
   ignoredServices: '*'
 
   routes:
-    e-public:
+    public:
       path: /public/**
-      serviceId: e-public-point
+      serviceId: public-point
       stripPrefix: false
 
-    e-mdm:
+    mdm:
       path: /mdm/**
       serviceId: e-mdm
       stripPrefix: false
