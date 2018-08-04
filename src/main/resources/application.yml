@@ -17,12 +17,12 @@ zuul:
   sensitiveHeaders:
 #  sensitive-headers: Cookie,Set-Cookie,Authorization
 #  ignore-security-headers: false
-  prefix: /api/v1
+#  prefix: /api/v1
   ignoredServices: '*'
 
   routes:
     public:
-      path: /public/**
+      path: /**
       serviceId: public-point
       stripPrefix: true
 
