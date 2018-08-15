@@ -7,9 +7,4 @@ import org.springframework.context.annotation.Import
  * The Java-configuration of application.
  */
 @Configuration
-@Import(
-    value = [
-        GatewayConfiguration::class
-    ]
-)
 class ApplicationConfiguration
