@@ -6,7 +6,7 @@ import org.springframework.boot.runApplication
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy
 
 @SpringBootApplication(
-    scanBasePackageClasses = [ApplicationConfiguration::class]
+        scanBasePackageClasses = [ApplicationConfiguration::class]
 )
 @EnableZuulProxy
 class GatewayApplication
