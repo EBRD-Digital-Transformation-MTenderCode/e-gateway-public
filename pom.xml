@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.procurement</groupId>
-    <artifactId>e-gateway-public</artifactId>
+    <artifactId>gateway-public</artifactId>
     <version>18.06.1</version>
     <packaging>jar</packaging>
 
-    <name>e-gateway-public</name>
+    <name>gateway-public</name>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
