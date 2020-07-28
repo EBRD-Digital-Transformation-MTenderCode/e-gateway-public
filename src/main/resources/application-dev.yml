@@ -26,10 +26,3 @@ zuul:
       path: /mdm/**
       serviceId: e-mdm
       stripPrefix: true
-
-eureka:
-  client:
-    fetchRegistry: true
-    registerWithEureka: false
-    serviceUrl:
-      defaultZone: http://10.0.20.116:8801/eureka/,http://10.0.20.116:8802/eureka/

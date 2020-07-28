@@ -1,5 +1,0 @@
-
-mvn clean package docker:build
-
-docker push docker-registry.eprocurement.systems/e-gateway-public:18.06.1
-
